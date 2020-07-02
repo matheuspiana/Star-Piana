@@ -49,7 +49,7 @@ def text_objects(text, font):
     textSurface = font.render(text, True, white)
     return textSurface, textSurface.get_rect()
 def message_display(text):
-    largeText = pygame.font.Font('freesansbold.ttf', 100)
+    largeText = pygame.font.Font('freesansbold.ttf', 70)
     TextSurf, TextRect = text_objects(text, largeText)
     TextRect.center = ((larguraTela/2, alturaTela/2))
     gamedisplay.blit(TextSurf, TextRect)
@@ -57,7 +57,7 @@ def message_display(text):
     time.sleep(5)
     game_loop()
 def mortenave():
-    message_display("Você Morreu!")
+    message_display("Você foi destruido!")
 def escrevePlacar(contador):
     font = pygame.font.SysFont("perpetua", 40)
     text = font.render("Desvios: "+str(contador), True, white)
